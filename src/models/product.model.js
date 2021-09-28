@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { required } from "nodemon/lib/config";
 
 const schema = new mongoose.Schema(
   {
@@ -37,6 +38,11 @@ const schema = new mongoose.Schema(
       type: String,
       default: "No description",
       // required: true,
+    },
+    image_link: {
+      type: String,
+      default: "https://picsum.photos/200",
+      required: true,
     },
   },
   { timestamps: true }
